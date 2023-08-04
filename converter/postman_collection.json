@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "454f7f1c-55c8-49fb-8fbf-b5cd3e23ba4f",
+		"name": "myhomework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28936816",
+		"_collection_link": "https://bold-shadow-154884.postman.co/workspace/1db6543a-17cb-42d5-9baa-43198a9497a5/collection/28936816-454f7f1c-55c8-49fb-8fbf-b5cd3e23ba4f?action=share&creator=28936816&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/api/convert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"conditions\" : [\r\n    {\r\n      \"conditions\" : [\r\n        {\r\n          \"conditions\" : [\r\n            {\r\n              \"conditions\" : [\r\n                {\r\n                  \"field\" : \"Country_vod__c\",\r\n                  \"operator\" : \"like\",\r\n                  \"values\" : [ \"'%a%'\" ]\r\n                },\r\n                {\r\n                  \"field\" : \"Email_vod__c\",\r\n                  \"operator\" : \"notLike\",\r\n                  \"values\" : [ \"'%b%'\" ]\r\n                }\r\n              ],\r\n              \"conjunction\" : \"and\"\r\n            },\r\n            {\r\n              \"conditions\" : [\r\n                {\r\n                  \"field\" : \"City_vod__c\",\r\n                  \"operator\" : \"equals\",\r\n                  \"values\" : [ \"'c'\" ]\r\n                },\r\n                {\r\n                  \"field\" : \"Name\",\r\n                  \"operator\" : \"notEquals\",\r\n                  \"values\" : [ \"'d'\" ]\r\n                }\r\n              ],\r\n              \"conjunction\" : \"and\"\r\n            }\r\n          ],\r\n          \"conjunction\" : \"or\"\r\n        },\r\n        {\r\n          \"field\" : \"Address_Line_1_vod__c\",\r\n          \"operator\" : \"lessThan\",\r\n          \"values\" : [ \"'e'\" ]\r\n        }\r\n      ],\r\n      \"conjunction\" : \"and\"\r\n    },\r\n    {\r\n      \"conditions\" : [\r\n        {\r\n          \"field\" : \"Address_Line_1_vod__c\",\r\n          \"operator\" : \"greaterThan\",\r\n          \"values\" : [ \"'f'\" ]\r\n        },\r\n        {\r\n          \"field\" : \"Address_Line_2_vod__c\",\r\n          \"operator\" : \"lessThanOrEqualTo\",\r\n          \"values\" : [ \"'g'\" ]\r\n        }\r\n      ],\r\n      \"conjunction\" : \"and\"\r\n    },\r\n    {\r\n      \"conditions\" : [\r\n        {\r\n          \"field\" : \"Call2_vod__r.Name\",\r\n          \"operator\" : \"greaterThanOrEqualTo\",\r\n          \"values\" : [ \"'h'\" ]\r\n        },\r\n        {\r\n          \"field\" : \"City_vod__c\",\r\n          \"operator\" : \"like\",\r\n          \"values\" : [ \"'i%'\" ]\r\n        }\r\n      ],\r\n      \"conjunction\" : \"and\"\r\n    }\r\n  ],\r\n  \"conjunction\" : \"or\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/convert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"convert"
+					],
+					"query": [
+						{
+							"key": "json",
+							"value": "{\n  \"conditions\" : [\n    {\n      \"field\" : \"Country_vod__c\",\n      \"operator\" : \"notLike\",\n      \"values\" : [ \"'%a%'\" ]\n    },\n    {\n      \"field\" : \"Account_vod__r.Name\",\n      \"operator\" : \"like\",\n      \"values\" : [ \"'%b%'\" ]\n    },\n    {\n      \"field\" : \"QA_Field_04__c\",\n      \"operator\" : \"greaterThanOrEqualTo\",\n      \"values\" : [ \"2020-09-18T16:00:00.000Z\" ]\n    },\n    {\n      \"field\" : \"QA_Field_02__c\",\n      \"operator\" : \"equals\",\n      \"values\" : [ \"CNY1\" ]\n    }\n  ],\n  \"conjunction\" : \"and\"\n}\n",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
