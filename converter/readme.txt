@@ -3,7 +3,7 @@ How to test it?
 If the postman is installed on your local, you can import the postman script file in the project folder.
 If you do not have postman, you can aslo use other restapi testing tool, like chrome extensions "Advanced REST client".
 You can simplfy the testing as well,just need to update the controller annotation to @GetMapping, you would not need to input any paramters.
-
-Have a nice day,Thanks!
+The api url is localhost:8081/api/convert.
+Thanks.
 
 
